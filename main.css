@@ -1,8 +1,41 @@
 body {
-	margin: 0;
+	display: flex;
+	max-width: 600px;
+	margin: auto;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: stretch;
+	font-size: 24px;
 	font-family: 'Poppins', sans-serif;
 }
 
 a {
 	color: #F554B1;
+}
+
+strong {
+	font-weight: 600;
+}
+
+.strike {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1em;
+}
+
+.strike::before, .strike::after {
+  content: '';
+  height: .125em;
+  background: black;
+  flex: 1;
+}
+
+.strike::before {
+	margin-right: .25em;
+}
+
+.strike::after {
+  margin-left: .25em;
 }
