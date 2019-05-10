@@ -1,12 +1,16 @@
 body {
 	display: flex;
-	max-width: 600px;
 	margin: auto;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: stretch;
 	font-size: 24px;
 	font-family: 'Poppins', sans-serif;
+	transition: opacity 1.5s;
+}
+
+body.hide {
+	opacity: 0;
 }
 
 a {
@@ -15,6 +19,28 @@ a {
 
 strong {
 	font-weight: 600;
+}
+
+header {
+	background-image: url("./leaves.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	height: 85vh;
+	min-height: 700px;
+	display: flex;
+	align-items: center;
+}
+
+header .text {
+	width: 100%;
+	max-width: 300px;
+	margin: auto;
+	padding: 60px 0;
+	color: #fff;
+}
+
+.name {
+	font-family: 'Amatic SC', cursive;
 }
 
 .strike {
@@ -28,7 +54,7 @@ strong {
 .strike::before, .strike::after {
   content: '';
   height: .125em;
-  background: black;
+  background: #fff;
   flex: 1;
 }
 
@@ -38,4 +64,11 @@ strong {
 
 .strike::after {
   margin-left: .25em;
+}
+
+main {
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	padding: 48px 0;
 }
