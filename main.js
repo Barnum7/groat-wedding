@@ -1,4 +1,9 @@
 !function() {
+	function onFontResolved () {
+		fitterHappierText(document.querySelectorAll('.stretch'), {baseline: '90%', paddingY: -6});
+		document.body.classList.remove('hide');
+	}
+
 	WebFont.load({
 		google: {
 			families: [
@@ -6,9 +11,7 @@
 				'Amatic SC',
 			],
 		},
-		active: function () {
-			fitterHappierText(document.querySelectorAll('.stretch'), {baseline: '90%', paddingY: -6});
-			document.body.classList.remove('hide');
-		},
+		active: onFontResolved,
+		inactive: onFontResolved,
 	});
 }();
