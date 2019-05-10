@@ -70,5 +70,6 @@ main {
 	width: 100%;
 	max-width: 600px;
 	margin: auto;
-	padding: 48px 0;
+	padding: 48px 1.2em;
+	box-sizing: border-box;
 }
